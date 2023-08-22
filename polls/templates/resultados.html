@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Enquetes</title>
+  <title>Pergunta</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,11 +18,15 @@
     <!-- place navbar here -->
   </header>
   <main>
-    <h1>Enquetes</h1>
-    {% for question in questions %} 
-    <a href="{% url 'pergunta' question.pk %}"><p>{{question.question_text}}  --  {{question.pub_date}} </p></a>
+
     
-    {% endfor %}
+    <h1>{{question.question_text}} -- {{question.pub_date}} </h1>
+    <ul>
+        {% for choice in question.choice_set.all %}     
+        <li>{{choice.choice_text}} - {{choice.votes}}</li>
+        {% endfor %}
+    </ul>
+
   </main>
   <footer>
     <!-- place footer here -->
