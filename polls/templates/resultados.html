@@ -23,7 +23,7 @@
     <h1>{{question.question_text}} -- {{question.pub_date}} </h1>
     <ul>
         {% for choice in question.choice_set.all %}     
-        <li>{{choice.choice_text}}   {{choice.votes}}</li>
+        <li>{{choice.choice_text}} - {{choice.votes}}</li>
         {% endfor %}
     </ul>
 
