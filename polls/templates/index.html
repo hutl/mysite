@@ -20,7 +20,7 @@
   <main>
     <h1>Enquetes</h1>
     {% for question in questions %} 
-    <a href="{% url 'pergunta' question.pk %}"><p>{{question.question_text}} {{question.pub_date}} </p></a>
+    <a href="{% url 'pergunta' question.pk %}"><p>{{question.question_text}}  --  {{question.pub_date}} </p></a>
     
     {% endfor %}
   </main>

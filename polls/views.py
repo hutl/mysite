@@ -10,3 +10,6 @@ class QuestionView(DetailView):
     model = Question
     template_name = "pergunta.html"
  
+class ResultsView(DetailView):
+    model = Question
+    template_name = "resultados.html"
