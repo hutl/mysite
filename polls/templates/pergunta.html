@@ -21,7 +21,7 @@
 
     
     <h1>{{question.question_text}}  --  {{question.pub_date}} </h1>
-    <form action="{% url 'vote' question.pk %}" method="post">
+    <form method="post">
       {% csrf_token %}
       <fieldset>
           {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
